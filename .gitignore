@@ -1,0 +1,20 @@
+# Codigo real do produto (NUNCA subir aqui — repo proprio + pode ter segredo)
+odonto-extract/
+
+# Backups e clones temporarios de outros repos
+_backup_odonto_skills/
+_src_gstack/
+_src_ponytail/
+
+# Config local do harness (SO a raiz — NAO o saas-base/.claude que e o setup)
+/.claude/
+
+# Segredos e ambiente
+.env
+.env.*
+!.env.example
+
+# Lixo de SO / deps
+node_modules/
+.DS_Store
+Thumbs.db
