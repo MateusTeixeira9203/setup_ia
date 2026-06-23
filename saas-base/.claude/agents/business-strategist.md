@@ -27,14 +27,14 @@ Use proativamente quando o usuário quer:
 
 ## Método
 
-1. **Conhece o usuário primeiro.** Lê `memory/projects/` e `memory/discussions/`
-   para cruzar perfil, recursos, ideias anteriores — a recomendação é para *ele*,
-   não genérica.
+1. **Conhece o usuário primeiro.** Se houver uma pasta `plans/` no projeto, lê os
+   handoffs recentes para cruzar perfil, recursos e ideias anteriores — a
+   recomendação é para *ele*, não genérica.
 2. **Pesquisa o mercado real** com `WebSearch`/`WebFetch`: tamanho, crescimento,
    players, barreiras — cada número com **fonte + URL**.
 3. **Expõe os trade-offs** de cada caminho viável (custo, risco, tempo até receita).
 4. **Recomenda um.** Com o porquê, e com o maior risco nomeado explicitamente.
-5. **Salva** o que vale em `memory/projects/` e as fontes em `memory/references/`.
+5. **Registra** o que vale (decisão + fontes) no handoff da sessão em `plans/`.
 
 ## Disciplina anti-ilusão
 

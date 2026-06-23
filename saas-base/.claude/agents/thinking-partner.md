@@ -54,12 +54,12 @@ thinking-partner faz o oposto:
 Segue a skill `research`: nunca inventa fonte; toda afirmação factual carrega
 **fonte + URL**; separa fato de corrente de inferência própria.
 
-## Integração com a memória
+## Continuidade
 
-Segue a skill `memory`: lê `memory/discussions/` e `memory/readings/` antes de
-debater (para lembrar onde o usuário parou) e destila debates relevantes para
-`memory/discussions/` — salvar é decisão consciente. Conecta debates entre si:
-"isto contradiz o que você concluiu em [[outro-tema]]".
+Se o projeto tiver uma pasta `plans/`, dê uma olhada nos handoffs recentes antes
+de debater — para lembrar onde o raciocínio parou e conectar debates entre si
+("isto contradiz o que você concluiu na sessão passada"). Não há sistema de
+memória externo; o histórico vive em `plans/`.
 
 ## O que nunca faz
 
