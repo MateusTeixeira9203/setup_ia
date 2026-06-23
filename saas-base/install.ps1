@@ -16,6 +16,11 @@ function Write-Utf8NoBom([string]$Path, [string]$Content) {
   [System.IO.File]::WriteAllText($Path, $Content, $enc)
 }
 
+# Le como UTF-8 (Get-Content -Raw no PS 5.1 assume o codepage do SO e corrompe acentos de arquivos UTF-8 sem BOM).
+function Read-Utf8([string]$Path) {
+  [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
+}
+
 # 1. Skills + agentes -> .claude/
 $dstClaude = Join-Path $Target ".claude"
 New-Item -ItemType Directory -Force -Path (Join-Path $dstClaude "skills") | Out-Null
@@ -25,10 +30,10 @@ Copy-Item (Join-Path $src ".claude\agents\*") (Join-Path $dstClaude "agents") -R
 Write-Host "[ok] skills + agentes copiados para .claude/"
 
 # 2. MCP servers -> .mcp.json (merge nao-destrutivo)
-$srcMcp = Get-Content (Join-Path $src ".mcp.json") -Raw | ConvertFrom-Json
+$srcMcp = Read-Utf8 (Join-Path $src ".mcp.json") | ConvertFrom-Json
 $dstMcpPath = Join-Path $Target ".mcp.json"
 if (Test-Path $dstMcpPath) {
-  $dstMcp = Get-Content $dstMcpPath -Raw | ConvertFrom-Json
+  $dstMcp = Read-Utf8 $dstMcpPath | ConvertFrom-Json
 } else {
   $dstMcp = [pscustomobject]@{ mcpServers = [pscustomobject]@{} }
 }
@@ -40,12 +45,12 @@ Write-Utf8NoBom $dstMcpPath ($dstMcp | ConvertTo-Json -Depth 10)
 Write-Host "[ok] MCP servers (context7, playwright) adicionados a .mcp.json"
 
 # 3. Regras -> CLAUDE.md (idempotente, via split por marcador — sem regex)
-$rules = (Get-Content (Join-Path $src "CLAUDE.rules.md") -Raw).TrimEnd()
+$rules = (Read-Utf8 (Join-Path $src "CLAUDE.rules.md")).TrimEnd()
 $claudeMd = Join-Path $Target "CLAUDE.md"
 $startMark = "<!-- SAAS-BASE-RULES:START"
 $endMark = "SAAS-BASE-RULES:END -->"
 if (Test-Path $claudeMd) {
-  $body = Get-Content $claudeMd -Raw
+  $body = Read-Utf8 $claudeMd
   $si = $body.IndexOf($startMark)
   $ei = $body.IndexOf($endMark)
   if ($si -ge 0 -and $ei -ge 0) {
