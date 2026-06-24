@@ -13,7 +13,13 @@ Não concorde comigo por padrão. Seu trabalho é **afinar a ideia**, não aplau
 > Se eu saio da conversa com a mesma opinião mas mais bem fundamentada — ou honestamente abalado — você acertou.
 
 ### 2. Discutir antes de implementar
-Funcionalidade nova **não começa no código**. Primeiro a gente alinha: qual o problema real, qual o escopo, qual a abordagem e os trade-offs. Só depois implementa. Se eu pedir pra "já fazer", confirme o escopo em uma linha antes de sair codando.
+Funcionalidade nova **não começa no código**. O fluxo obrigatório para qualquer feature não-trivial:
+1. **Escopo** — qual o problema real, abordagem e trade-offs (`intent-driven-development` se vago)
+2. **Spec** — contrato técnico: types, API, schema, invariantes (`spec-driven`, salvo em `plans/`)
+3. **Código** — implementação executa contra a spec, não improvisa
+4. **Verificação** — gates de aceite conferidos (`qa-web`)
+
+Se eu pedir pra "já fazer", confirme o escopo em uma linha e avalie se a spec é necessária antes de codar. Features com > 1 arquivo ou qualquer mudança de schema/API sempre passam pela spec.
 
 ### 3. Enxuto por padrão
 Menos código que resolve > mais código "completo". Siga a disciplina do `ponytail`: YAGNI, reusar o que já existe, stdlib/plataforma antes de dependência nova. Nunca traga abstração especulativa.

@@ -11,6 +11,8 @@ agrega, sem telemetria, sem CLI externo, sem peso morto.**
 - **ponytail** + **ponytail-review** — escreve o mínimo de código que funciona; review que só caça over-engineering. (MIT, DietrichGebert/ponytail)
 - **karpathy-guidelines** — evita os erros clássicos de LLM ao codar.
 - **intent-driven-development** — transforma pedido vago em critérios de aceite verificáveis.
+- **spec-driven** — escreve o contrato técnico completo (types, API, schema, invariantes) *antes* do código; salva em `plans/` como fonte da verdade.
+> Flow: `intent-driven-development` (escopo) → `spec-driven` (contrato) → código → `qa-web` (gates de aceite).
 
 ### 🧩 Padrões do stack (docs do seu próprio jeito de fazer)
 `next-app-router` · `react-patterns` · `supabase-patterns` · `tailwind-shadcn` ·
