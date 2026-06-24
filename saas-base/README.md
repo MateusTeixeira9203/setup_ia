@@ -18,9 +18,11 @@ agrega, sem telemetria, sem CLI externo, sem peso morto.**
 > Autorados originalmente no Atlas, casam 100% com o stack. Combinam com o **Context7 MCP** (docs oficiais sempre atuais).
 
 ### 🎨 Design (anti-genérico — não pode ter cara de IA)
+- **frontend-design** — geração de UI **distintiva** e production-grade que foge do "AI slop" (telas de marca, landing, artifacts). *Oficial da Anthropic, Apache-2.0.*
 - **design-review** — audita a UI renderizada e caça **AI slop** (gradiente roxo, grid de 3 colunas, bordas bubbly, copy genérica). *Destilado do gstack, sem telemetria.*
-- **impeccable-design-polish** — passada final que remove cara de IA.
-- **design-brief** · **design-system-tokens** · **gsap-core** — direção visual, tokens e animação.
+- **design-brief** · **design-system-tokens** — direção visual e vocabulário de tokens (consistência dentro do produto).
+- **design-motion-principles** · **gsap-core** — motion: princípios por contexto (Emil/Jakub/Jhey, foco em Motion/Framer) + API do GSAP para timelines/ScrollTrigger.
+> Pipeline: `frontend-design`/`design-brief` (gerar) → `tailwind-shadcn` (construir) → `design-motion-principles` (animar) → `design-review` + agente `design-polish` (auditar e corrigir).
 
 ### 🧪 Qualidade
 - **qa-web** — testa o app rodando como usuário, acha bugs e corrige (loop triagem→fix→re-verifica). *Adaptado do gstack p/ Playwright MCP.*
@@ -60,4 +62,6 @@ projeto. Reinicie o Claude Code no projeto pra carregar.
 
 ## Créditos
 ponytail (MIT) · gstack (MIT, garrytan) · ECC (MIT, affaan-m) · open-design (Apache-2.0, nexu-io) ·
-impeccable (pbakaus) · padrões de stack autorados por Mateus Teixeira (Atlas).
+frontend-design (Apache-2.0, Anthropic) · design-motion-principles (MIT, kylezantos) ·
+impeccable (pbakaus, Apache-2.0 — patterns absorvidos no agente design-polish) ·
+padrões de stack autorados por Mateus Teixeira (Atlas).

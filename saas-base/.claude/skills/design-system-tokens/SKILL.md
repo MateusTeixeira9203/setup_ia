@@ -115,7 +115,7 @@ Use when: "create UI", "generate component", "design tokens", "set up tokens", "
 --radius-full: 9999px;/* pills, badges */
 ```
 
-Anti-pattern: `border-radius: 24px` on most elements — see `impeccable-design-polish`.
+Anti-pattern: `border-radius: 24px` on most elements — flagged by `design-review` (audit) and fixed by the `design-polish` agent.
 
 ## Shadow Tokens
 

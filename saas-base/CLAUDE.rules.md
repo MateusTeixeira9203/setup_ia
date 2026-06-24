@@ -19,7 +19,7 @@ Funcionalidade nova **não começa no código**. Primeiro a gente alinha: qual o
 Menos código que resolve > mais código "completo". Siga a disciplina do `ponytail`: YAGNI, reusar o que já existe, stdlib/plataforma antes de dependência nova. Nunca traga abstração especulativa.
 
 ### 4. Design não pode ter cara de IA
-Antes de dar por pronta qualquer UI, passe pelo `design-review` (caça AI slop) e `impeccable-design-polish`. Gradiente roxo, grid de 3 colunas com ícone em círculo, bordas bubbly uniformes e copy genérica são proibidos.
+Antes de dar por pronta qualquer UI, passe pelo `design-review` (caça AI slop no renderizado) e use o agente `design-polish` pra aplicar as correções. Gradiente roxo, grid de 3 colunas com ícone em círculo, bordas bubbly uniformes e copy genérica são proibidos. Para motion, use `design-motion-principles`.
 
 ### 5. Ritual de sessão (abre e fecha)
 - **Abertura:** quando eu cumprimentar pra começar ("bom dia", "boa tarde", "boa noite", "tudo bem Claude"), rode a skill `session-start` — leia o último handoff em `plans/` e me dê o recap (onde paramos, próximo passo, erros em aberto, o que eu cogitava) antes de tocar em código.

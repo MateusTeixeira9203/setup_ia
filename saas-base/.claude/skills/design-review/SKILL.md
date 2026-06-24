@@ -5,7 +5,7 @@ description: >
   inconsistency, weak hierarchy, bad spacing, and slow interactions — then
   reports them with letter grades and specific fixes. Use when the user asks
   to review a UI, audit a page's design, check if something "looks AI-generated",
-  do a visual/UX pass, or before shipping any screen. Pairs with impeccable-design-polish.
+  do a visual/UX pass, or before shipping any screen. Pairs with the design-polish agent (which applies the fixes) and design-motion-principles (for motion-specific audits).
 license: MIT
 source: "Destilado de garrytan/gstack (MIT) — telemetria/GBrain/CLI removidos; browser adaptado para Playwright MCP."
 ---
