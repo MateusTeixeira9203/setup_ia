@@ -13,7 +13,15 @@ description: >
 O usuário cumprimentou pra começar a trabalhar. Não comece do zero — **retome de
 onde a última sessão parou.**
 
-## 1. Achar o último handoff
+## 1. Checar Obsidian (contexto do projeto)
+
+Se o usuário mencionou um projeto pelo nome, verifique se existe um arquivo
+em `C:\Users\mateu\Desktop\brain_m\Projetos\{NomeProjeto}.md` e leia-o.
+Isso traz a visão, decisões tomadas e stack do projeto antes de ler o handoff.
+
+Se não souber o projeto ainda, pule — o handoff vai esclarecer.
+
+## 2. Achar o último handoff
 
 ```bash
 ls -t plans/handoff-*.md 2>/dev/null | head -1

@@ -105,7 +105,19 @@ Ordenado por prioridade:
 - [ ] [dívida] — [arquivo:linha] — [quando resolver / por que é tolerável agora]
 ```
 
-## 4. Resumo no chat
+## 4. Capturar no Obsidian (se houver decisões ou aprendizados)
+
+Se a sessão produziu decisões relevantes, aprendizados ou avanços de projeto,
+salve no vault `brain_m` antes de encerrar:
+
+- **Decisão de produto ou arquitetura** → crie/atualize em `Produto/` ou `Arquitetura/`
+  usando o template `Templates/decisao.md`
+- **Avanço de projeto** → atualize `Projetos/{NomeProjeto}.md` (Log de evolução)
+- **Ideia ou pensamento em aberto** → capture em `Entrada/` para processar depois
+
+> Se a sessão foi só exploratória ou não gerou nada durável, pule este passo.
+
+## 5. Resumo no chat
 
 Depois de salvar, mostre só:
 - O que concluímos (até 3 bullets)
