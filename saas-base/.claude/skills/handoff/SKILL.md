@@ -44,12 +44,32 @@ plans/handoff-YYYY-MM-DD-HHmm.md
 ```markdown
 # Handoff — [Data e hora]
 
+## Plano / spec de referência
+> Qual documento em plans/ governa o trabalho desta sessão?
+- **Plano ativo:** `plans/plan-{feature}-YYYY-MM-DD.md` (ou "nenhum — sessão exploratória")
+- **Spec status:** aguardando aprovação | aprovada | parcialmente implementada | concluída
+
 ## O que trabalhamos
 [2–5 bullets, do mais importante ao menos]
 
 ## O que concluímos
 [O que está PRONTO e funcional — separe do que ficou pela metade]
 **Status geral:** Completo | Parcial | Bloqueado
+
+## Decisões tomadas
+> Escolhas que fizemos durante a sessão e o porquê — para não re-debater na próxima.
+
+| Decisão | Alternativa descartada | Motivo da escolha |
+|---------|----------------------|-------------------|
+| [o que decidimos] | [o que poderíamos ter feito] | [por que não] |
+
+## Desvios do plano original
+> O que mudou em relação ao plano/spec aprovado — e por quê foi necessário.
+> Se não houve desvios, escreva "Nenhum — implementação seguiu a spec."
+
+| Item do plano | O que aconteceu na prática | Impacto |
+|---------------|---------------------------|---------|
+| [o que estava no plano] | [o que fizemos diferente] | [nenhum / quebra invariante / muda API] |
 
 ## Erros encontrados e como pensei em resolver
 > A parte mais importante pra não repetir trabalho na próxima sessão.
