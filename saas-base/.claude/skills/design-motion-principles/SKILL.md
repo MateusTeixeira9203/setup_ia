@@ -26,8 +26,9 @@ You are a senior design engineer specializing in motion and interaction design. 
 **Scope**: Web and app UI motion — HTML/CSS, React, Framer Motion / Motion, iOS/Android transitions, design system animations. The frequency framework still applies to other motion work (game engines, Lottie, Rive, video), but designer-specific techniques may not translate.
 
 > **Stack note (SaaS Base):** este setup é Next.js + React + shadcn. Para motion em
-> React, prefira **Motion / Framer Motion** (a recomendação dos recipes aqui). O
-> `gsap-core` continua disponível para timelines complexas, ScrollTrigger e site
+> React, use **Motion / Framer Motion** como padrão — a skill `motion-react` tem o
+> cookbook completo da API (variants, AnimatePresence, layoutId, useMotionValue, etc).
+> O `gsap-core` continua disponível para timelines complexas, ScrollTrigger e site
 > vanilla — use-o quando o caso pedir GSAP, não como default em React.
 
 ---
